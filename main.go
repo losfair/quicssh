@@ -23,6 +23,8 @@ func main() {
 				Name: "client",
 				Flags: []cli.Flag{
 					&cli.StringFlag{Name: "addr", Value: "localhost:4242"},
+					&cli.IntFlag{Name: "keep-alive-period-secs", Value: 0},
+					&cli.BoolFlag{Name: "insecure-skip-verify", Value: false},
 				},
 				Action: client,
 			},
